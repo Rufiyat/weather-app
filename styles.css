@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search button {
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search button:hover {
+    background-color: #0b7dda;
+  }
+  
+  .weather-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .weather-info img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: none;  /* Initially hidden */
+  }
+  
+  #loading {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .weather-info p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Styling the hourly forecast container */
+  .hourly-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+  
+.hourly-forecast-item {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 5px;
+  width: 80px;
+  color: #fff; /* White text for readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  font-size: 0.9rem; /* Adjust text size for better fit */
+}
+
+  .hourly-forecast-item img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hourly-forecast-item p {
+    margin: 5px 0;
+    font-size: 12px; /* Slightly smaller text for descriptions */
+}
+
+#toggle-forecast-btn {
+  padding: 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 100%; /* Full width to align with the app's design */
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#toggle-forecast-btn:hover {
+  background-color: #0b7dda;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#toggle-forecast-btn:active {
+  background-color: #005a9e;
+  transform: scale(0.98); /* Slight press effect on click */
+}
+
+/* Style the 'Use My Location' button */
+#location-btn {
+  padding: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 80%; /* Same width as the search bar */
+  font-size: 1rem;
+}
+
+#location-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Toggle Button Styling */
+#unit-toggle-btn {
+  background-color: #4CAF50; /* Match the theme color */
+  color: white; /* Text color */
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: absolute; /* Position it nicely */
+  top: 10px; /* Adjust the top placement */
+  right: 10px; /* Adjust the right placement */
+  z-index: 10;
+}
+
+/* Hover Effect */
+#unit-toggle-btn:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.05);
+}
+
+/* Active State (when pressed) */
+#unit-toggle-btn:active {
+  transform: scale(0.98);
+}
